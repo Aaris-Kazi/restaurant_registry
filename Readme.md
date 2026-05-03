@@ -17,5 +17,5 @@
     --env-file .env \
     -e MACHINE_IP=$MACHINE_IP \
     -p 8081:8080 \
-    --name app \
-    your-image
+    --name restaurant-listing \
+    aariskazi/restaurant-listing:v1.0.0
