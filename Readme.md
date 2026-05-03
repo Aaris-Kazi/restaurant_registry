@@ -8,6 +8,7 @@
 
 ## Deployment env
     export SPRING_PROFILES_ACTIVE=prod
+    export MACHINE_IP=$(hostname -I | awk '{print $1}')
 
 ## Docker Commands to build
     docker build -t aariskazi/restaurant-listing:v1.0.0 .
