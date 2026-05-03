@@ -12,4 +12,4 @@
 ## Docker Commands to build
     docker build -t aariskazi/restaurant-listing:v1.0.0 .
 
-    docker run -d -p 8081:8080 —name restaurant-listing aariskazi/restaurant-listing:v1.0.0
+    docker run -d -p 8081:8080 -e SPRING_PROFILES_ACTIVE=prod --name restaurant-listing aariskazi/restaurant-listing:v1.0.0
