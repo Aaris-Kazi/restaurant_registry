@@ -4,10 +4,6 @@ spring:
     username: ${SPRING_DATASOURCE_USERNAME:aaris}
     password: ${SPRING_DATASOURCE_PASSWORD:12345}
     driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
 
 eureka:
   client:
