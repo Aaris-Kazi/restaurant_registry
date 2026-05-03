@@ -13,4 +13,9 @@
 ## Docker Commands to build
     docker build -t aariskazi/restaurant-listing:v1.0.0 .
 
-    docker run -d -p 8081:8080 -e SPRING_PROFILES_ACTIVE=prod --name restaurant-listing aariskazi/restaurant-listing:v1.0.0
+    docker run -d \
+  --env-file .env \
+  -e MACHINE_IP=$MACHINE_IP \
+  -p 8081:8080 \
+  --name app \
+  your-image
