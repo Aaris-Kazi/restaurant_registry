@@ -57,7 +57,7 @@ pipeline {
                 sh '''
                 docker run -d \
                 --env-file .env \
-                -p $PORT:8082 \
+                -p 8081:$PORT \
                 --name $CONTAINER_NAME \
                 $IMAGE_NAME:$IMAGE_TAG
                 '''
