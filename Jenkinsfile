@@ -37,7 +37,8 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t $IMAGE_NAME .'
+                sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
+                docker tag $IMAGE_NAME:$IMAGE_TAG $IMAGE_NAME:latest
             }
         }
 
@@ -55,7 +56,7 @@ pipeline {
                 --env-file .env \
                 -p $PORT:8082 \
                 --name $CONTAINER_NAME \
-                $IMAGE_NAME
+                $IMAGE_NAME:$IMAGE_TAG
                 '''
             }
         }
