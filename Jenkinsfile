@@ -5,6 +5,7 @@ pipeline {
         IMAGE_NAME = "aariskazi/restaurant-listing"
         CONTAINER_NAME = "restaurant-listing"
         PORT = "8080"
+        IMAGE_TAG = "v${BUILD_NUMBER}"
     }
 
     stages {
